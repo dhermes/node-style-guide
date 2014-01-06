@@ -493,12 +493,27 @@ Do not use braces when conditionally ending the function with a callback.
 *Right:*
 
 ```js
+if (x) return cb(null, 1);
+```
+
+*Wrong:*
+```js
+if (x) {
+  return cb(null, 1);
+}
+```
+
+Do not specify "null" when returning ```null```;
+
+*Right:*
+
+```js
 if (x) return cb();
 ```
 
 *Wrong:*
 ```js
 if (x) {
-  return cb();
+  return cb(null, null);
 }
 ```

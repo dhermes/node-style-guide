@@ -503,7 +503,7 @@ if (x) {
 }
 ```
 
-Do not specify "null" when returning ```null```;
+Use implicit ```null``` when returning ```null``` result;
 
 *Right:*
 

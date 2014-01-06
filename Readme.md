@@ -210,6 +210,29 @@ var b = {"good": 'code'
         };
 ```
 
+*Right:*
+
+```js
+myfn(
+  { a: 1 },
+  {
+    a: 1,
+    c: 2
+  }
+);
+```
+
+*Wrong:*
+
+```js
+myfn(
+  { a: 1 },
+  { a: 1,
+    c: 2
+  }
+);
+```
+
 ## Use the === operator
 
 Programming is not about remembering [stupid rules][comparisonoperators]. Use

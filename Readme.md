@@ -513,7 +513,5 @@ if (x) return cb();
 
 *Wrong:*
 ```js
-if (x) {
-  return cb(null, null);
-}
+if (x) return cb(null, null);
 ```

@@ -483,3 +483,22 @@ Feel free to use getters that are free from [side effects][sideeffect], like
 providing a length property for a collection class.
 
 [sideeffect]: http://en.wikipedia.org/wiki/Side_effect_(computer_science)
+
+## Callbacks
+
+Name callbacks ```cb```.
+
+Do not use braces when conditionally ending the function with a callback.
+
+*Right:*
+
+```js
+if (x) return cb();
+```
+
+*Wrong:*
+```js
+if (x) {
+  return cb();
+}
+```

@@ -515,3 +515,20 @@ if (x) return cb();
 ```js
 if (x) return cb(null, null);
 ```
+
+Avoid using the expanded equilvalent of ```cb```. It's okay to pass along the inner call's value.
+
+*Right:*
+
+```js
+myfun(123, cb);
+```
+
+*Wrong:*
+
+```js
+myfun(123, function(err, ret) {
+  if (err) return cb(err);
+  return cb();
+});
+```

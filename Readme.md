@@ -532,3 +532,17 @@ myfun(123, function(err, ret) {
   return cb();
 });
 ```
+
+## Lodash
+
+Use `_.map` instead of `_.pluck`
+
+Right:
+```
+_.map([{a: 1}, {a: 2}], 'a');
+```
+
+Wrong:
+```
+_.pluck([{a: 1}, {a: 2}], 'a');
+```

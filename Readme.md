@@ -503,7 +503,7 @@ if (x) {
 }
 ```
 
-Use implicit ```null``` when returning ```null``` result;
+Use implicit ```undefined``` when returning ```undefined``` result;
 
 *Right:*
 
@@ -513,7 +513,7 @@ if (x) return cb();
 
 *Wrong:*
 ```js
-if (x) return cb(null, null);
+if (x) return cb(undefined, undefined);
 ```
 
 Avoid using the expanded equilvalent of ```cb```. It's okay to pass along the inner call's value.

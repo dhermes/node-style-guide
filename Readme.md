@@ -516,7 +516,7 @@ if (x) return cb();
 if (x) return cb(undefined, undefined);
 ```
 
-Avoid using the expanded equilvalent of ```cb```. It's okay to pass along the inner call's value.
+Avoid using the expanded equivalent of ```cb```. It's okay to pass along the inner call's value.
 
 *Right:*
 

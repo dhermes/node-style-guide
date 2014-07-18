@@ -37,9 +37,9 @@ cheap syntactic pleasures.
 [the opposition]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [hnsemicolons]: http://news.ycombinator.com/item?id=1547647
 
-## 80 characters per line
+## 120 characters per line
 
-Limit your lines to 80 characters. Yes, screens have gotten much bigger over the
+Limit your lines to 120 [80 in 1970 dollars] characters. Yes, screens have gotten much bigger over the
 last few years, but your brain has not. Use the additional room for split screen,
 your editor supports that, right?
 
@@ -258,24 +258,6 @@ if (a == '') {
 ```
 
 [comparisonoperators]: https://developer.mozilla.org/en/JavaScript/Reference/Operators/Comparison_Operators
-
-## Use multi-line ternary operator
-
-The ternary operator should not be used on a single line. Split it up into multiple lines instead.
-
-*Right:*
-
-```js
-var foo = (a === b)
-  ? 1
-  : 2;
-```
-
-*Wrong:*
-
-```js
-var foo = (a === b) ? 1 : 2;
-```
 
 ## Do not extend built-in prototypes
 

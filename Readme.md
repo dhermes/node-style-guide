@@ -528,3 +528,38 @@ Wrong:
 ```
 _.pluck([{a: 1}, {a: 2}], 'a');
 ```
+
+## Multi-line function calls
+
+If you are calling a function with one argument per line (e.g. when the argument expresssions are long),
+insert a newline before the first one and indent the rest 2 spaces in from the function call.
+
+Right:
+```js
+myfun(
+  longExpression1,
+  longExpression2,
+  longExpession3
+)
+```
+
+Wrong:
+```js
+myfun(longExpression1,
+  longExpression2,
+  longExpession3
+)
+```
+
+Wrong:
+```js
+myfun(longExpression1,
+      longExpression2,
+      longExpession3)
+```
+
+Wrong:
+```js
+myFun(halfLengthExpression1, halfLengthExpression2,
+          longExpressionXYZABCDEFGHIJK)
+```

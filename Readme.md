@@ -557,3 +557,9 @@ myfun(longExpression1,
       longExpression2,
       longExpession3)
 ```
+
+Wrong:
+```js
+myFun(halfLengthExpression1, halfLengthExpression2,
+          longExpressionXYZABCDEFGHIJK)
+```

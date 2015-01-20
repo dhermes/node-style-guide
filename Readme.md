@@ -587,7 +587,8 @@ async.waterfall([
 ```
 
 Advantages of the async.waterfall (https://github.com/caolan/async#waterfall) style are:
+
 1. It removes the duplication introduced by "if (err) return cb(err);"
-  a. Therefore it's impossible to mess up / forget to write "if (err) return cb(err);"
-  b. You don't have to write a test for the "if (err)" case to have full branch coverage.
-2. It can reduce nesting in cases where the waterfall extends to 3 or more functions.
+  1. It's impossible to mess up / forget to write "if (err) return cb(err);"
+  2. No need to unit test the "if (err)" case to achieve full branch coverage.
+2. It reduces nesting when the waterfall extends to 3 or more functions.

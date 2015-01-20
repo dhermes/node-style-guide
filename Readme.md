@@ -586,7 +586,7 @@ async.waterfall([
 ], cb);
 ```
 
-Advantages of the async.waterfall (https://github.com/caolan/async#waterfall) style are:
+Advantages of the [async.waterfall](https://github.com/caolan/async#waterfall) style are:
 
 1. It removes the duplication introduced by "if (err) return cb(err);"
   1. It's impossible to mess up / forget to write "if (err) return cb(err);"

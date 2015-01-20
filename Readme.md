@@ -563,3 +563,31 @@ Wrong:
 myFun(halfLengthExpression1, halfLengthExpression2,
           longExpressionXYZABCDEFGHIJK)
 ```
+
+## async.waterfall instead of manual error checking
+
+Wrong:
+```js
+myfunction1('a', function(err, ret) {
+  if (err) return cb(err);
+  myfunction2(1, 2, cb);
+});
+```
+
+Right:
+```js
+async.waterfall([
+  function(cb) {
+    myfunction1('a');
+  },    // or _.partial(myfunction1, 'a')
+  function(ret, cb) {
+    myfunction2(1, 2, cb);
+  }
+], cb);
+```
+
+Advantages of the async.waterfall (https://github.com/caolan/async#waterfall) style are:
+1. It removes the duplication introduced by "if (err) return cb(err);"
+  a. Therefore it's impossible to mess up / forget to write "if (err) return cb(err);"
+  b. You don't have to write a test for the "if (err)" case to have full branch coverage.
+2. It can reduce nesting in cases where the waterfall extends to 3 or more functions.

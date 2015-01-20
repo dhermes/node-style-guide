@@ -578,7 +578,7 @@ Right:
 ```js
 async.waterfall([
   function(cb) {
-    myfunction1('a');
+    myfunction1('a', cb);
   },    // or _.partial(myfunction1, 'a')
   function(ret, cb) {
     myfunction2(1, 2, cb);

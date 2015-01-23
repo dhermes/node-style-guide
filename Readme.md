@@ -564,9 +564,11 @@ myFun(halfLengthExpression1, halfLengthExpression2,
           longExpressionXYZABCDEFGHIJK)
 ```
 
-## async.waterfall instead of manual error checking
+## Prefer async.waterfall to manual error checking
 
-Wrong:
+This is more of a guideline than a hard rule.
+
+Questionable:
 ```js
 myfunction1('a', function(err, ret) {
   if (err) return cb(err);
@@ -574,7 +576,7 @@ myfunction1('a', function(err, ret) {
 });
 ```
 
-Right:
+Encouraged:
 ```js
 async.waterfall([
   function(cb) {

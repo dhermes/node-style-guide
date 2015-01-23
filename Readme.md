@@ -581,7 +581,7 @@ async.waterfall([
     myfunction1('a', cb);
   },    // or _.partial(myfunction1, 'a')
   function(ret, cb) {
-    myfunction2(1, 2, cb);
+    myfunction2(ret.b, 2, cb);
   }
 ], cb);
 ```

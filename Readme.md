@@ -115,8 +115,6 @@ function foo(bar, color, speed, sound) {
 foo(bar, 'bah', 'boo', 'baz');
 ```
 
-[crockfordconvention]: http://javascript.crockford.com/code.html
-
 
 ## Declare one variable per var statement
 

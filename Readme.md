@@ -82,6 +82,42 @@ if (true)
 
 Also, notice the use of whitespace before and after the condition statement.
 
+## Pass all optional parameters as a single object
+
+Pass all optional parameters as a single object, it makes it easier to change function
+definitions.
+
+*Right:*
+
+```js
+function foo(bar, opts) {
+  this.color = opts.color;
+  this.speed = opts.speed;
+  this.sound = opts.sound
+}
+
+foo(bar, {
+  color : 'bah',
+  speed : 'boo',
+  sound : 'baz'
+});
+```
+
+*Wrong:*
+
+```js
+function foo(bar, color, speed, sound) {
+  this.color = color;
+  this.speed = speed;
+  this.sound = sound;
+}
+
+foo(bar, 'bah', 'boo', 'baz');
+```
+
+[crockfordconvention]: http://javascript.crockford.com/code.html
+
+
 ## Declare one variable per var statement
 
 Declare one variable per var statement, it makes it easier to re-order the

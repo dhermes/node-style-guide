@@ -82,10 +82,10 @@ if (true)
 
 Also, notice the use of whitespace before and after the condition statement.
 
-## Pass all optional parameters as a single object
+## Pass all optional parameters to a function as a single object
 
-Pass all optional parameters as a single object, it makes it easier to change function
-definitions.
+Pass all optional parameters to a function as a single object, it makes it easier to
+change function definitions.
 
 *Right:*
 
@@ -120,7 +120,6 @@ function foo(bar, color, speed, sound) {
 
 foo(bar, 'bah', 'boo', 'baz');
 ```
-
 
 ## Declare one variable per var statement
 

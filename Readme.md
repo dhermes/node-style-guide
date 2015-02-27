@@ -91,6 +91,12 @@ definitions.
 
 ```js
 function foo(bar, opts) {
+  opts = _.defaults(opts, {
+    colour: 'red',
+    speed: '100 mph',
+    sound: '100 gigahertz'
+  });
+
   this.color = opts.color;
   this.speed = opts.speed;
   this.sound = opts.sound
@@ -107,9 +113,9 @@ foo(bar, {
 
 ```js
 function foo(bar, color, speed, sound) {
-  this.color = color;
-  this.speed = speed;
-  this.sound = sound;
+  this.color = color || 'red';
+  this.speed = speed || '100 mph';
+  this.sound = sound || '100 gigahertz';
 }
 
 foo(bar, 'bah', 'boo', 'baz');

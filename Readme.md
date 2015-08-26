@@ -634,7 +634,7 @@ Advantages of the [async.waterfall](https://github.com/caolan/async#waterfall) s
   2. No need to unit test the "if (err)" case to achieve full branch coverage.
 2. It reduces nesting when the waterfall extends to 3 or more functions.
 
-## Use IIFEs to avoid duplicated assignment.
+## Use IIFEs to avoid duplicated assignment
 
 A common pattern in JS is to assign a variable based on branching logic, for instance:
 ```

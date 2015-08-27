@@ -633,3 +633,34 @@ Advantages of the [async.waterfall](https://github.com/caolan/async#waterfall) s
   1. It's impossible to mess up / forget to write "if (err) return cb(err);"
   2. No need to unit test the "if (err)" case to achieve full branch coverage.
 2. It reduces nesting when the waterfall extends to 3 or more functions.
+
+## Use IIFEs to avoid duplicated assignment
+
+A common pattern in JS is to assign a variable based on branching logic, for instance:
+```
+var x;
+if (a) {
+  x = 1;
+} else if (b) {
+  x = 2;
+} else if (c) {
+  x = 3;
+} else {
+  x = 4;
+}
+```
+
+It's less repetitive to use an IIFE in this situation. In the previous example, the code would be written like this:
+```
+var x = (function() {
+  if (a) {
+    return 1;
+  } else if (b) {
+    return 2;
+  } else if (c) {
+    return 3;
+  } else {
+    return 4;
+  }
+})();
+```
